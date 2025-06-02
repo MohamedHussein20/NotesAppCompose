@@ -2,11 +2,12 @@ plugins {
     id ("com.android.application")
     id ("kotlin-android")
     id ("kotlin-kapt")
+    id("org.jetbrains.kotlin.plugin.compose") version "2.1.0"
 }
 
 android {
     namespace = "com.memo.notesappcompose"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.memo.notesappcompose"
@@ -75,7 +76,7 @@ dependencies {
     implementation (libs.androidx.hilt.navigation.compose)
 
     // Coroutines
-    implementation (libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.core)
     implementation (libs.kotlinx.coroutines.android)
 
     //Dagger - Hilt
