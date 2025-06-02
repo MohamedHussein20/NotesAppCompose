@@ -1,4 +1,4 @@
-package com.memo.notesappcompose
+package com.memo.notesappcompose.feature_note.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
