@@ -10,7 +10,6 @@ import androidx.lifecycle.viewModelScope
 import com.memo.notesappcompose.feature_note.domain.model.Note
 import com.memo.notesappcompose.feature_note.domain.use_case.NoteUseCases
 import com.memo.notesappcompose.feature_note.presentation.add_edit_note.AddEditNoteEvent
-import com.memo.notesappcompose.feature_note.presentation.add_edit_note.NoteTextFieldState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -27,20 +26,20 @@ class AddEditNoteViewModel @Inject constructor(
             hint = "Enter title..."
         )
     )
-    private val noteTitle: State<NoteTextFieldState> = _noteTitle
+    val noteTitle: State<NoteTextFieldState> = _noteTitle
 
     private val _noteContent = mutableStateOf(
         NoteTextFieldState(
             hint = "Enter some content"
         )
     )
-    private val noteContent: State<NoteTextFieldState> = _noteContent
+    val noteContent: State<NoteTextFieldState> = _noteContent
 
     private val _noteColor = mutableIntStateOf(Note.noteColors.random().toArgb())
-    private val noteColor: State<Int> = _noteColor
+    val noteColor: State<Int> = _noteColor
 
     private val _eventFlow = MutableSharedFlow<UiEvent>()
-    private val eventFlow = _eventFlow.asSharedFlow()
+    val eventFlow = _eventFlow.asSharedFlow()
 
     sealed class UiEvent {
         data class ShowSnackbar(val message: String) : UiEvent()
