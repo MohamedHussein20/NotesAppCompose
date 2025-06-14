@@ -33,12 +33,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.BlendMode.Companion.Screen
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.memo.notesappcompose.feature_note.presentation.notes.components.NoteItem
 import com.memo.notesappcompose.feature_note.presentation.notes.components.OrderSection
+import com.memo.notesappcompose.feature_note.presentation.util.Screen
 import kotlinx.coroutines.launch
 
 

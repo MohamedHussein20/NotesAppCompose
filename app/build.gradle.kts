@@ -3,6 +3,7 @@ plugins {
     id ("kotlin-android")
     id ("kotlin-kapt")
     id("org.jetbrains.kotlin.plugin.compose") version "2.1.0"
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -84,13 +85,13 @@ dependencies {
 
     //Dagger - Hilt
     implementation (libs.hilt.android)
-    kapt (libs.hilt.android.compiler)
+    ksp (libs.hilt.android.compiler)
     implementation (libs.androidx.hilt.lifecycle.viewmodel)
-    kapt (libs.androidx.hilt.compiler)
+    ksp (libs.androidx.hilt.compiler)
 
     // Room
     implementation (libs.androidx.room.runtime)
-    kapt (libs.androidx.room.compiler)
+    ksp (libs.androidx.room.compiler)
 
     // Kotlin Extensions and Coroutines support for Room
     implementation (libs.androidx.room.ktx)
